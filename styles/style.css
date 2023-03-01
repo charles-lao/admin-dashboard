@@ -2,7 +2,12 @@
     margin: 0;
     padding: 0;
     border: 1px solid red;
-    font-family: Roboto, Helvetica, sans-serif;
+    font-family: Roboto;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
 }
 
 li {
@@ -18,7 +23,7 @@ li {
 }
 
 .sidebar { 
-    grid-template-rows: 3rem 10rem 5rem;
+    grid-template-rows: 3rem 15rem 8rem;
     grid-column: 1;
     grid-row: 1 / 4;
     gap: 10px;
@@ -53,6 +58,19 @@ li {
     display: grid;
     gap: 3px;
     padding-left: 10px;
+}
+
+.links-1 li,
+.links-2 li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.links-1 li img,
+.links-2 li img {
+    height: 30px;
+    width: 30px;
 }
 
 .links-2 {
