@@ -18,7 +18,6 @@ li {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr repeat(auto-fill, 1fr);
-    gap: 10px;
     background-color: #e1e8f0;
 }
 
@@ -30,6 +29,7 @@ li {
     background-color: #1892d3;
     display: grid;
     color: #ffffff;
+    font-weight: bold;
 }
 
 .logo {
@@ -85,6 +85,8 @@ li {
     grid-row: 1;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    background-color: #ffffff;
+    box-shadow: 3px 3px #cdd1d4
 }
 
 .upper-header {
@@ -99,6 +101,10 @@ li {
     display: flex;
 }
 
+.user-settings img {
+    height: 1.4rem;
+}
+
 .search {
     display: grid;
     grid-template-columns: 30px 1fr;
@@ -109,9 +115,14 @@ li {
     padding-right: 10px;
 }
 
+.search input[type=search] {
+    background-color: #e1e8f0;
+    border-radius: 10px;
+}
+
 .search input[type=search],
 .search img {
-    height: 1.7rem;
+    height: 1.4rem;
     align-self: center;
 }
 
@@ -130,17 +141,22 @@ li {
 }
 
 .user-display {
-    display: flex;
+    display: grid;
     justify-content: start;
     align-items: center;
-    gap: 10px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
     padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 .user-display img {
     height: 40px;
     width: 40px;
     border-radius: 20px;
+    grid-column: 1;
+    grid-row: 1 / 3;
 }
 
 .dashboard-controls {
@@ -150,7 +166,11 @@ li {
 }
 
 .dashboard-controls button {
-    padding: 8px;
+    padding: 8px 26px 8px 26px;
+    background-color: #1892d3;
+    border-radius: 15px;
+    border: none;
+    color: white;
 }
 
 .main-content {
@@ -169,7 +189,7 @@ li {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(auto-fill);
     gap: 10px;
-    padding: 0 10px 0 10px;
+    padding: 10px 10px 0 10px;
 }
 
 .your-projects h3 {
